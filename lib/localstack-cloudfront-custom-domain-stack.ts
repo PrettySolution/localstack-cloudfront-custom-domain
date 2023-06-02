@@ -63,7 +63,7 @@ export class LocalstackCloudfrontCustomDomainStack extends cdk.Stack {
 
     new BucketDeployment(this, 'BucketDeployment', {
       sources: [
-        Source.asset('web', {
+        Source.asset('vite-project', {
           bundling: {
             image: DockerImage.fromRegistry('public.ecr.aws/docker/library/node:18.12.1'),
             user: 'root:root',
